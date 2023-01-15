@@ -29,23 +29,25 @@
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div>
-                        
+                        <div class="p-6 border-t border-gray-500 dark:border-gray-700 md:border-b md:border-l border"><h2>Phase4_app</h2></div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                        <div class="p-6 border-t border-gray-500 dark:border-gray-700 md:border-t-4 md:border-l">
                             <div>
                                 @if (Route::has('login'))
                                     <div class="text-center ">
                                         @auth
                                             <a href="{{ url('/dashboard') }}" class="text-6xl text-gray-700 dark:text-gray-500 ">to</a>
                                         @else
-                                            <a href="{{ route('login') }}" class="text-6xl text-gray-700 dark:text-gray-500 ">Log in</a>
-
+                                        <div class="p-6 border-gray-500 dark:border-gray-700 md:border-t-4 ">
+                                            <a href="{{ route('login') }}" class="text-center text-6xl text-gray-700 dark:text-gray-500 "><h3>Log in</h3></a>
+                                        </div>
+                                        <div class="p-6 border-t border-gray-500 dark:border-gray-700 md:border-t-4 border-b-4">
                                             @if (Route::has('register'))
-                                                <a href="{{ route('register') }}" class="ml-4 text-6xl text-gray-700 dark:text-gray-500 ">Register</a>
+                                                <a href="{{ route('register') }}" class="text-center text-6xl text-gray-700 dark:text-gray-500 "><h3>Register</h3></a>
                                             @endif
+                                        </div>
                                         @endauth
-                                    </div>    
-                                    {{-- </div> --}}
+                                    </div>   
                                 @endif                                
                             </div>
 
